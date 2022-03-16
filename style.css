@@ -1,0 +1,44 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-image: linear-gradient(to bottom, #615dad, #ffc8da);
+}
+
+.kontajner {
+  display: flex;
+  flex-direction: column;
+}
+
+.main text {
+  width: 300px;
+  height: 250px;
+  color: #ffffff;
+  background-color: #283e50;
+  border: black solid;
+  border-width: 2px;
+}
+.pravidla {
+  color: #ffffff;
+  background-color: #1fcca4;
+}
+.a :hover {
+  background-color: ;#1cbb96
+} 
+
+.zacithrat {
+  color: #ffffff;
+  background-color: #0197f6;
+}
+
+.a :hover {
+  background-color: ;#0090e9
+}
+
+.buttons {
+  text-decoration: none;
+}
