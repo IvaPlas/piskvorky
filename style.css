@@ -1,44 +1,81 @@
 *,
-::before,
-::after {
+:after,
+:before {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
+
 body {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
+  color: #ffffff;
+  font-family: 'Lobster', cursive;
 }
 
-.kontajner {
+.flex-container {
+  width: 650px;
+  height: 800px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: 0;
+  
+}
+.picture {
+  margin: 0px;
+}
+.description {
+  display: flex;
+  flex-direction: column ;
+  align-items: center;
+  flex-grow: 1;
+  background-color: #283e50;
+
 }
 
-.main text {
-  width: 300px;
-  height: 250px;
-  color: #ffffff;
-  background-color: #283e50;
-  border: black solid;
-  border-width: 2px;
+h1 {
+  text-align: center;
+  align-self: center;
+  flex-basis: 50px;
 }
+
+p{
+  flex-basis: 200px;
+  text-align: center;
+  font-family: ;
+}
+
 .pravidla {
-  color: #ffffff;
   background-color: #1fcca4;
 }
-.a :hover {
-  background-color: ;#1cbb96
-} 
-
-.zacithrat {
-  color: #ffffff;
+.zacithrat{
   background-color: #0197f6;
 }
 
+.a :hover pravidla{
+  background-color: ;#1cbb96;
+} 
+
+.button {
+  align-items: center;
+  padding: 50px 100 px;
+  height: 100px;
+  flex-grow: 1;
+}
+
 .a :hover {
-  background-color: ;#0090e9
+  background-color: ;#0090e9;
+}
+
+.a {
+  text-decoration-line: none;
+  align-self:center;
+  align-items: center;
 }
 
 .buttons {
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  padding: 0;
 }
