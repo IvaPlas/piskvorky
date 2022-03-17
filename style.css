@@ -1,81 +1,67 @@
-*,
-:after,
-:before {
-  box-sizing: border-box;
-}
-
 body {
   background-image: linear-gradient(to bottom, #615dad, #ffc8da);
   color: #ffffff;
-  font-family: 'Lobster', cursive;
 }
 
-.flex-container {
-  width: 650px;
-  height: 800px;
+.flex.container {
+  display: flex;
+  flex-direction: column;,
+}
+
+.box {
+  height: 350px;
+  width: 600px;
+}
+
+.picture img {
+  width: 600px;
+  height: 350px;
+  border-radius: 20px 20px 0 0;
+}
+
+.picture {
+  height: 350px;
+}
+
+.about {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  border: 2px solid black;
-  padding: 0;
-  
-}
-.picture {
-  margin: 0px;
-}
-.description {
-  display: flex;
-  flex-direction: column ;
-  align-items: center;
-  flex-grow: 1;
   background-color: #283e50;
-
+  padding: 0 10px 0 10px;
+  width: 580px;
+  flex-basis: 350px;
 }
 
 h1 {
+  font-family: 'Lobster', cursive;
   text-align: center;
-  align-self: center;
-  flex-basis: 50px;
+  font-weight: lighter;
+  font-size: 50px;
+  margin: 20px 50px;
 }
 
-p{
-  flex-basis: 200px;
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
   text-align: center;
-  font-family: ;
-}
-
-.pravidla {
-  background-color: #1fcca4;
-}
-.zacithrat{
-  background-color: #0197f6;
-}
-
-.a :hover pravidla{
-  background-color: ;#1cbb96;
-} 
-
-.button {
-  align-items: center;
-  padding: 50px 100 px;
-  height: 100px;
-  flex-grow: 1;
-}
-
-.a :hover {
-  background-color: ;#0090e9;
-}
-
-.a {
-  text-decoration-line: none;
-  align-self:center;
-  align-items: center;
+  margin: 0;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
+  height: 150px;
+}
+.pravidla {
   flex-basis: 50%;
-  padding: 0;
+  background-color: #1fcca4;
+}
+
+.zacithrat {
+  flex-basis: 50%;
+  background-color: #0197f6;
+}
+
+.zacithrat a :hover {
+  background-color: #1cbb96;
 }
