@@ -9,15 +9,17 @@
   </head>
   <body>
     <div class="kontejner">
-      <div class="pravidla-text">
+      <div class="pravidla-komplet">
         <h1 id="hlavne-pravidla">Pravidla</h1>
-        <p id="navod">
-        <ol>
+        <ol class="postup">
           <li>Hra piškvorky je určena pro dva hráče.</li>
           <li>Hraje se na hrací ploše 10×10, tvořené poli ve tvaru čtverce.</li>
           <li>
-            Na začátku si hráči rozdělí role. Jeden bude hrát za kolečka, druhý
-            bude hrát za křížky.
+            Na začátku si hráči rozdělí role. Jeden bude hrát za kolečka
+            <span><img src="images/circle.svg" alt="krouzek" /></span>, druhý
+            bude hrát za křížky<span
+              ><img src="images/cross.svg" alt="krizek" /></span
+            >.
           </li>
           <li>
             Losem se určí, kdo bude začínat. V naší aplikaci to vylosujeme za
@@ -41,39 +43,70 @@
             symbolů do jedné řady, hra končí remízou.
           </li>
         </ol>
-        </p>
         <div class="obrazky">
           <figure>
-            <img src="/images/instructions-01.jpg"
-                 alt="piškvorky-tah3">
-            <figcaption>Situace po třech tazích - na tahu je hráč s kolečky</figcaption>
+            <img
+              class="obr-situace"
+              src="/images/instructions-01.jpg"
+              alt="piškvorky-tah3"
+            />
+            <figcaption>
+              Situace po třech tazích - na tahu je hráč s kolečky
+            </figcaption>
           </figure>
           <figure>
-            <img src="/images/instructions-02.jpg"
-                 alt="piškvorky-tah4">
+            <img
+              class="obr-situace"
+              src="/images/instructions-02.jpg"
+              alt="piškvorky-tah4"
+            />
             <figcaption>Situace po čtyřech tazích</figcaption>
           </figure>
           <figure>
-            <img src="/images/instructions-03.jpg"
-                 alt="piškvorky-vyhrávají kolečka">
+            <img
+              class="obr-situace"
+              src="/images/instructions-03.jpg"
+              alt="piškvorky-vyhrávají kolečka"
+            />
             <figcaption>Výherní pozice hráče s kolečky</figcaption>
           </figure>
           <figure>
-            <img src="/images/instructions-04.jpg"
-                 alt="piškvorky-remíza">
-            <figcaption>V této situaci nikdo nevyhrává. Pokud je na tahu hráč s kolečky, může přidat další kolečko do šikmé řady, kde už má 4 kolečka, a vyhraje.</figcaption>
+            <img
+              class="obr-situace"
+              src="/images/instructions-04.jpg"
+              alt="piškvorky-remíza"
+            />
+            <figcaption>
+              V této situaci nikdo nevyhrává. Pokud je na tahu hráč s kolečky,
+              může přidat další kolečko do šikmé řady, kde už má 4 kolečka, a
+              vyhraje.
+            </figcaption>
           </figure>
           <figure>
-            <img src="/images/instructions-05.jpg"
-                 alt="piškvorky-vyhrávají křížky">
+            <img
+              class="obr-situace"
+              src="/images/instructions-05.jpg"
+              alt="piškvorky-vyhrávají křížky"
+            />
             <figcaption>Výherní pozice hráče s křížky</figcaption>
           </figure>
           <figure>
-            <img src="/images/instructions-06.jpg"
-                 alt="piškvorky- opět vyhrávají kolečka">
+            <img
+              class="obr-situace"
+              src="/images/instructions-06.jpg"
+              alt="piškvorky- opět vyhrávají kolečka"
+            />
             <figcaption>Ještě jedna výherní pozice hráče s kolečky</figcaption>
           </figure>
         </div>
+      </div>
+      <div class="box buttons">
+        <a class="button uvodniStranka" href="index.html">
+          <span>Úvodní stránka</span></a
+        >
+        <a class="button zacithrat" href="index.html">
+          <span>Začít hrát</span></a
+        >
       </div>
     </div>
   </body>
