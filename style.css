@@ -9,6 +9,9 @@ body {
   min-height: 100vh;
   margin: 20px;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .flex-container {
@@ -16,12 +19,12 @@ body {
   flex-direction: column;
   margin: auto;
   flex-basis: 100%;
+  max-width: 500px;
 }
 
 .picture {
   border-radius: 20px 20px 0 0;
   width: 100%;
-  /* height: 300px; */
 }
 
 .about {
@@ -29,8 +32,6 @@ body {
   flex-direction: column;
   background-color: #283e50;
   padding: 0 10px 0 10px;
-  /* flex-basis: 40%; */
-  /* height: 400px; */
 }
 
 h1 {
@@ -38,20 +39,17 @@ h1 {
   text-align: center;
   font-weight: lighter;
   font-size: 40pxx;
-  margin: 10px 10px 0 10px;
+  margin: 20px 10px 0 10px;
 }
 
 p {
-  /* font-size: 25px; */
   text-align: center;
-  /* margin: 0; */
   padding: 10px;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
-  /* flex-basis: 20%; */
 }
 
 .button {
@@ -95,25 +93,32 @@ p {
   background-color: #283e50;
   border-radius: 20px 20px 0 0;
 }
+#pravidla {
+  margin-top: 20px;
+}
 
 span img {
   width: 1em;
   height: 1em;
-  filter: invert (100%);
+  filter: invert(100%);
 }
 
-figcaption,
-.postup {
-  font-size: 20px;
+figure {
+  width: 100%;
 }
 
 .postup {
   margin: 20px;
+  font-size: 20px;
 }
 
 .obrazky {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  align-content: stretch;
+  justify-content: center;
 }
 
 .obr-situace {
@@ -121,25 +126,16 @@ figcaption,
 }
 
 figcaption {
+  font-size: 20px;
   text-align: center;
 }
 
-@media (min-width: 600px) {
-  .flex-container {
-    max-width: 600px;
-  }
-
+@media (min-width: 650px) {
   .kontejner {
-    max-width: 600px;
+    max-width: 650px;
   }
 
-  /* figure {
-    flex-wrap: wrap;
-    width: 50%;
-  } */
-
-  .obrazky {
-    flex-wrap: wrap;
-    width: 50%;
+  figure {
+    width: 35%;
   }
 }
