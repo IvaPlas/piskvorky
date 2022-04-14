@@ -195,24 +195,24 @@ figcaption {
 .pictogram {
   width: 1.2em;
   height: 1.2em;
+  margin: 10px 0 0 10px;
 }
 
 .playground {
   display: flex;
   flex-wrap: wrap;
-  height: 80vh;
-  /* border: 2px solid black; */
-  /* opacity: 0.3; */
+  height: 80vmin;
 }
 
 .playground_button {
   border: 2px solid black;
   width: 10%;
   height: 10%;
-  max-height: 8vh;
-  opacity: 0.4;
+  opacity: 0.5;
+  margin: 0;
 }
 
-.playground_button:hover {
+.playground_button:hover,
+.playground_button:focus {
   background-color: white;
 }
