@@ -190,15 +190,13 @@ figcaption {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 10px;
 }
 .gamer_on {
   font-size: 2rem;
 }
 
 #pictogram {
-  width: 1em;
-  margin: 0 0 10px 0;
+  width: auto;
   filter: invert(100%);
 }
 
@@ -222,7 +220,6 @@ figcaption {
 }
 
 /* ----pripojenie javascriptu---- */
-
 .playground_button--circle {
   background-image: url('/images/circle.svg');
 }
@@ -231,9 +228,20 @@ figcaption {
   background-image: url('images/cross.svg');
 }
 
+@keyframes example {
+  from {
+    background-size: 0%;
+  }
+  to {
+    background-size: 70%;
+  }
+}
+
 .playground_button--circle,
 .playground_button--cross {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 3rem;
+  background-size: 70%;
+  animation-name: example;
+  animation-duration: 0.3s;
 }
