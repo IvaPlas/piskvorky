@@ -7,7 +7,7 @@ body {
   color: #ffffff;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   min-height: 100vh;
-  margin: 20px;
+  margin: auto;
   font-size: 20px;
   display: flex;
   justify-content: center;
@@ -101,7 +101,8 @@ p {
   margin-top: 20px;
 }
 
-span img {
+#circle,
+#cross {
   width: 1em;
   height: 1em;
   filter: invert(100%);
@@ -150,6 +151,7 @@ figcaption {
   max-width: 80vmin;
   display: flex;
   flex-direction: column;
+  margin: 20px 0 20px;
 }
 
 #head3 {
@@ -188,14 +190,16 @@ figcaption {
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  gap: 10px;
 }
 .gamer_on {
   font-size: 2rem;
 }
-.pictogram {
-  width: 1.2em;
-  height: 1.2em;
-  margin: 10px 0 0 10px;
+
+#pictogram {
+  width: 1em;
+  margin: 0 0 10px 0;
+  filter: invert(100%);
 }
 
 .playground {
@@ -208,11 +212,28 @@ figcaption {
   border: 2px solid black;
   width: 10%;
   height: 10%;
-  opacity: 0.5;
   margin: 0;
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .playground_button:hover,
 .playground_button:focus {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ----pripojenie javascriptu---- */
+
+.playground_button--circle {
+  background-image: url('/images/circle.svg');
+}
+
+.playground_button--cross {
+  background-image: url('images/cross.svg');
+}
+
+.playground_button--circle,
+.playground_button--cross {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 3rem;
 }
