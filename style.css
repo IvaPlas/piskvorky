@@ -212,6 +212,7 @@ figcaption {
   height: 10%;
   margin: 0;
   background-color: rgba(255, 255, 255, 0.4);
+  background-size: 0%;
 }
 
 .playground_button:hover,
@@ -227,7 +228,7 @@ figcaption {
 .playground_button--cross {
   background-image: url('images/cross.svg');
 }
-
+/* 
 @keyframes example {
   from {
     background-size: 0%;
@@ -235,13 +236,14 @@ figcaption {
   to {
     background-size: 70%;
   }
-}
+} */
 
 .playground_button--circle,
 .playground_button--cross {
   background-repeat: no-repeat;
   background-position: center;
+  /* animation-name: example;
+  animation-duration: 0.3s; */
   background-size: 70%;
-  animation-name: example;
-  animation-duration: 0.3s;
+  transition: background-size 0.5s;
 }
