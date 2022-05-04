@@ -1,7 +1,8 @@
 console.log('frcim');
+const buttons = document.querySelectorAll('.playground_button');
 
 let naTahuJe = 'circle';
-const addClass = (ev) => {
+const move = (ev) => {
   console.log('Na tahu je : ', naTahuJe);
   if (naTahuJe === 'circle') {
     ev.target.classList.add('playground_button--circle');
@@ -14,27 +15,35 @@ const addClass = (ev) => {
     naTahuJe = 'circle';
     ev.target.disabled = true;
   }
+  console.log(isWinningMove(ev.target));
 };
 
-const buttons = document.querySelectorAll('.playground_button');
-const playground = document.querySelector('.playground');
+for (let i = 0; i < buttons.length; i += 1) {
+  buttons[i].addEventListener('click', move);
+}
 
-const getSymbol = (buttons) => {
-  if (buttons.classList.contains('playground_button--circle')) {
+const getSymbol = (button) => {
+  if (button.classList.contains('playground_button--circle')) {
     return 'circle';
-  } else if (buttons.classList.contains('playground_button--cross')) {
+  } else if (button.classList.contains('playground_button--cross')) {
     return 'cross';
   }
 };
+
+// const prvniPolicko = buttons[0];
+// const symbolNaPrvnimPolicku = getSymbol(prvniPolicko);
+// console.log(symbolNaPrvnimPolicku);
 
 const boardsize = 10;
 const getButton = (row, column) => {
   return buttons[row * boardsize + column];
 };
 
-const getPosition = (buttons) => {
+console.log(getButton(1, 2));
+
+const getPosition = (button) => {
   let index = 0;
-  while (index < playground.length && buttons !== playground[index]) {
+  while (index < buttons.length && button !== buttons[index]) {
     index++;
   }
   return {
@@ -43,12 +52,25 @@ const getPosition = (buttons) => {
   };
 };
 
+console.log(getPosition(buttons[52]));
+
 const symbolsToWin = 5;
-const isWinningMove = (buttons) => {
-  const origin = getPosition(buttons);
-  const symbol = getSymbol(buttons);
+const isWinningMove = (button) => {
+  const origin = getPosition(button);
+  const symbol = getSymbol(button);
+
+  let winner;
+  if (symbol === 'cross') {
+    winner = 'křižek';
+  } else {
+    winner = 'kroužek';
+  }
+  const winnerIs = () => {
+    alert(`Vyhrál ${winner}`);
+  };
 
   let i;
+
   let inRow = 1;
   i = origin.column;
   while (i > 0 && symbol === getSymbol(getButton(origin.row, i - 1))) {
@@ -66,7 +88,7 @@ const isWinningMove = (buttons) => {
   }
 
   if (inRow >= symbolsToWin) {
-    return true;
+    return setTimeout(winnerIs, 400);
   }
 
   let inColumn = 1;
@@ -86,12 +108,8 @@ const isWinningMove = (buttons) => {
   }
 
   if (inColumn >= symbolsToWin) {
-    return true;
+    return setTimeout(winnerIs, 400);
   }
 
   return false;
 };
-for (let i = 0; i < buttons.length; i += 1) {
-  buttons[i].addEventListener('click', addClass);
-  buttons[i].addEventListener('click', isWinningMove);
-}
