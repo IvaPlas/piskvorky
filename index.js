@@ -15,8 +15,16 @@ const addClass = (ev) => {
     ev.target.disabled = true;
   }
 };
-
 const buttons = document.querySelectorAll('.playground_button');
+const getSymbol = (buttons) => {
+  if (buttons.classList.contains('playground_button--circle')) {
+    return 'circle';
+  } else if (buttons.classList.contains('playground_button--cross')) {
+    return 'cross';
+  }
+};
+
 for (let i = 0; i < buttons.length; i += 1) {
   buttons[i].addEventListener('click', addClass);
+  buttons[i].addEventListener('click', getSymbol);
 }
