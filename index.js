@@ -43,8 +43,55 @@ const getPosition = (buttons) => {
   };
 };
 
+const symbolsToWin = 5;
+const isWinningMove = (buttons) => {
+  const origin = getPosition(buttons);
+  const symbol = getSymbol(buttons);
+
+  let i;
+  let inRow = 1;
+  i = origin.column;
+  while (i > 0 && symbol === getSymbol(getButton(origin.row, i - 1))) {
+    inRow++;
+    i--;
+  }
+
+  i = origin.column;
+  while (
+    i < boardsize - 1 &&
+    symbol === getSymbol(getButton(origin.row, i + 1))
+  ) {
+    inRow++;
+    i++;
+  }
+
+  if (inRow >= symbolsToWin) {
+    return true;
+  }
+
+  let inColumn = 1;
+  i = origin.row;
+  while (i > 0 && symbol === getSymbol(getButton(i - 1, origin.column))) {
+    inColumn++;
+    i--;
+  }
+
+  i = origin.row;
+  while (
+    i < boardsize - 1 &&
+    symbol === getSymbol(getButton(i + 1, origin.column))
+  ) {
+    inColumn++;
+    i++;
+  }
+
+  if (inColumn >= symbolsToWin) {
+    return true;
+  }
+
+  return false;
+};
 for (let i = 0; i < buttons.length; i += 1) {
   buttons[i].addEventListener('click', addClass);
-  buttons[i].addEventListener('click', getButton);
-  buttons[i].addEventListener('click', getPosition);
+  buttons[i].addEventListener('click', isWinningMove);
 }
